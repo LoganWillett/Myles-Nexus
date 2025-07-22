@@ -2,16 +2,16 @@ const projects = [
   {
     title: "Drone Videography",
     desc: "FAA Part 107 flights for wedding, construction and real-estate clients; 48-hour edits.",
-    link: "https://youtu.be/yourReelID"
+    link: "#"
   },
   {
     title: "Infantry Sergeant & FDC",
-    desc: "Lead mortar squad, coordinate fire missions, mentor 7 soldiers.",
+    desc: "Lead mortar squad and coordinate fire missions.",
     link: "#"
   },
   {
     title: "Rapid Response Decon Tech",
-    desc: "On-call HazMat decontamination drills and real events.",
+    desc: "On-call HazMat decontamination drills.",
     link: "#"
   },
   {
