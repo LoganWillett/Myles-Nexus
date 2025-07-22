@@ -2,55 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Logan Willett – Field Specialist</title>
+  <title>Logan Willett | Field Specialist</title>
+  <meta name="description" content="FAA-certified drone pilot & multi-role field specialist">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      padding: 2rem;
-      background: #111;
-      color: #eee;
-    }
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.25rem;
-    }
-    p {
-      margin-top: 0;
-      font-weight: 300;
-    }
-    nav a {
-      color: #9cf;
-      text-decoration: none;
-      margin-right: 1rem;
-    }
-    section {
-      margin-top: 2rem;
-    }
-  </style>
+
+  <!-- Open Graph & Twitter Cards -->
+  <meta property="og:title" content="Logan Willett Portfolio">
+  <meta property="og:description" content="Drone videography, military leadership, rapid-response care.">
+  <meta property="og:image" content="https://loganwillett.github.io/Myles-Nexus/assets/img/hero-drone.jpg">
+  <meta property="og:url" content="https://loganwillett.github.io/Myles-Nexus/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <h1>Logan Willett</h1>
-  <p>Field Specialist • Drone Pilot • Sergeant • Caregiver</p>
-  <nav>
-    <a href="#work">Work</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <header id="top">
+    <h1>Logan Willett</h1>
+    <p class="tag">Field Specialist • FAA Part 107 Pilot • Sergeant</p>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="about.html">About</a>
+      <a href="#contact">Contact</a>
+      <a href="resume.pdf" download>Résumé PDF</a>
+    </nav>
+  </header>
 
-  <section id="work">
-    <h2>Selected Work</h2>
-    <ul>
-      <li>Army National Guard – Infantry Sergeant & FDC Operator</li>
-      <li>Drone Videographer – FAA Part 107, Real Estate & Construction</li>
-      <li>RRS Decontamination – On-call Emergency Readiness</li>
-      <li>Direct Care for Adults w/ Disabilities – Boise, ID</li>
-    </ul>
+  <!-- hero banner image -->
+  <section class="hero">
+    <img src="assets/img/hero-drone.jpg" alt="Drone over mountain venue">
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: yourname@example.com</p>
-  </section>
+  <!-- work cards will be injected here -->
+  <main id="work" class="cards"></main>
+
+  <footer id="contact">
+    <p>Email • Phone • LinkedIn</p>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>
