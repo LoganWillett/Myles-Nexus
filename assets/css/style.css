@@ -1,24 +1,51 @@
-/* 1. CSS reset & variables */
-:root {
-  --bg: #111; --fg: #eee; --accent: #8fd3ff;
-  --fw-bold: 700; --fw-base: 300;
-  --max-w: 900px;
+:root{
+  --bg:#111; --fg:#eee; --accent:#8fd3ff; --maxw:960px;
+  --card:#1b1b1b; --card-hover:#252525;
+  --font-main: system-ui, sans-serif;
 }
-*{margin:0;padding:0;box-sizing:border-box}
-body{font:16px/1.6 system-ui, sans-serif;background:var(--bg);color:var(--fg);}
-
-/* 2. Layout containers */
-header,footer,main,section{max-width:var(--max-w);margin:auto;padding:2rem 1rem;}
-nav a{margin-right:1rem;color:var(--accent);text-decoration:none;font-weight:var(--fw-bold);}
-.hero img{width:100%;height:auto;border-radius:.5rem;margin:1rem 0;}
-
-/* 3. Card grid */
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;}
-.card{background:#1b1b1b;padding:1.5rem;border-radius:.5rem;transition:transform .25s;}
-.card:hover{transform:translateY(-6px);}
-
-/* 4. Responsive text sizes */
-@media(min-width:48em){
-  h1{font-size:3rem;}
-  .tag{font-size:1.25rem;}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg); color:var(--fg);
+  font-family:var(--font-main); line-height:1.6;
+}
+header, main, footer, section{
+  max-width:var(--maxw); margin:auto; padding:2rem 1rem;
+}
+h1{font-size:2.6rem; margin-bottom:.25rem; font-weight:700;}
+h2{font-size:1.75rem; margin:2.5rem 0 1rem;}
+h3{margin:0 0 .5rem; font-size:1.25rem;}
+.tagline{font-weight:300; margin-bottom:1rem;}
+nav a{
+  color:var(--accent); text-decoration:none; margin-right:1rem; font-weight:600;
+}
+.hero img{
+  width:100%; height:auto; border-radius:.6rem; margin:1rem 0 2rem;
+}
+.cards{
+  display:grid; gap:1.5rem;
+  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+}
+.card{
+  background:var(--card); padding:1.5rem 1.75rem; border-radius:.6rem;
+  transition:.25s transform, .25s background;
+}
+.card:hover{transform:translateY(-4px); background:var(--card-hover);}
+.org,.dates{font-size:.9rem; color:#bbb;}
+ul{margin: .5rem 0 0 1.2rem;}
+.pill-list{
+  display:flex; flex-wrap:wrap; gap:.5rem 1rem; list-style:none; margin-left:0;
+}
+.pill-list li{
+  background:#222; padding:.35rem .8rem; border-radius:1rem; font-size:.9rem;
+}
+.video{position:relative; padding-top:56.25%; margin-top:1rem;}
+.video iframe{
+  position:absolute; top:0; left:0; width:100%; height:100%;
+  border:0; border-radius:.4rem;
+}
+footer a{color:var(--accent);}
+@media (min-width:48em){
+  h1{font-size:3.2rem;}
+  .tagline{font-size:1.2rem;}
 }
