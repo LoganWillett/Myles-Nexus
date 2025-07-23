@@ -49,3 +49,40 @@ footer a{color:var(--accent);}
   h1{font-size:3.2rem;}
   .tagline{font-size:1.2rem;}
 }
+/* Title animation */
+.ml5{
+  position:relative;
+  font-weight:300;
+  font-size:4.5rem;
+  color:#fff;               /* white text */
+  text-align:center;
+  margin:0 auto 1rem;
+  line-height:1.1;
+}
+.ml5 .text-wrapper{
+  position:relative;
+  display:inline-block;
+  padding:.1em .05em .15em;
+}
+.ml5 .line{
+  position:absolute;
+  left:0; top:0; bottom:0; margin:auto;
+  height:3px; width:100%;
+  background:#fff;          /* white line */
+  transform-origin:0.5 0;
+}
+.ml5 .ampersand{
+  font-family:inherit;      /* no fancy ampersand, just a spacer */
+  font-style:normal;
+  width:.3em; margin:0;
+}
+.ml5 .letters{
+  display:inline-block;
+  opacity:0;
+  color:#fff;
+}
+
+/* Smaller on phones */
+@media (max-width:480px){
+  .ml5{font-size:2.8rem;}
+}
