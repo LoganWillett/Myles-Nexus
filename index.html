@@ -27,7 +27,6 @@
   </span>
 </h1>
 <p class="tagline">Field Specialist • FAA Part 107 Remote Pilot • Infantry Sergeant</p>
-  <p class="tagline">Field Specialist • FAA Part 107 Remote Pilot • Infantry Sergeant</p>
   <nav>
     <a href="#work">Work</a>
     <a href="#skills">Skills</a>
@@ -87,44 +86,49 @@
 <script>
   ScrollReveal().reveal('.card',{distance:'40px',duration:600,interval:120});
 </script>
-  <script src="assets/js/main.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js" integrity="sha512-C7hT5H4vQy7tqUO1L5v0xqI3QK5tUf7iD+4Vf5VZlQmW8m3S0m+o5t6cQy7n2rA2m4XeP2S0sI7y2Pm2jS3Kxw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ <script src="assets/js/main.js" defer></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"
+        integrity="sha512-C7hT5H4vQy7tqUO1L5v0xqI3QK5tUf7iD+4Vf5VZlQmW8m3S0m+o5t6cQy7n2rA2m4XeP2S0sI7y2Pm2jS3Kxw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://unpkg.com/scrollreveal"></script>
 
 <script>
-anime.timeline({ loop: true })
-  .add({
-    targets: '.ml5 .line',
-    opacity: [0.5, 1],
-    scaleX: [0, 1],
-    easing: 'easeInOutExpo',
-    duration: 700
-  }).add({
-    targets: '.ml5 .line',
-    duration: 600,
-    easing: 'easeOutExpo',
-    translateY: (el, i) => (-0.625 + 1.25*i) + 'em' // top & bottom lines
-  }).add({
-    targets: '.ml5 .letters-left',
-    opacity: [0, 1],
-    translateX: ['0.5em', 0],
-    easing: 'easeOutExpo',
-    duration: 600,
-    offset: '-=300'
-  }).add({
-    targets: '.ml5 .letters-right',
-    opacity: [0, 1],
-    translateX: ['-0.5em', 0],
-    easing: 'easeOutExpo',
-    duration: 600,
-    offset: '-=600'
-  }).add({
-    targets: '.ml5',
-    opacity: 0,
-    duration: 800,
-    easing: 'easeOutExpo',
-    delay: 1000
+  // run after DOM is ready
+  document.addEventListener('DOMContentLoaded', () => {
+    // Title animation
+    anime.timeline({ loop: false })       // no loop so it stays visible
+      .add({
+        targets: '.ml5 .line',
+        opacity: [0.5, 1],
+        scaleX: [0, 1],
+        easing: 'easeInOutExpo',
+        duration: 700
+      }).add({
+        targets: '.ml5 .line',
+        duration: 600,
+        easing: 'easeOutExpo',
+        translateY: (el, i) => (-0.625 + 1.25 * i) + 'em' // move top & bottom lines
+      }).add({
+        targets: '.ml5 .letters-left',
+        opacity: [0, 1],
+        translateX: ['0.5em', 0],
+        easing: 'easeOutExpo',
+        duration: 600,
+        offset: '-=300'
+      }).add({
+        targets: '.ml5 .letters-right',
+        opacity: [0, 1],
+        translateX: ['-0.5em', 0],
+        easing: 'easeOutExpo',
+        duration: 600,
+        offset: '-=600'
+      });
+    
+    // Card reveal
+    ScrollReveal().reveal('.card', { distance: '40px', duration: 600, interval: 120 });
   });
 </script>
 </body>
-  
 </html>
